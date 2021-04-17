@@ -1,0 +1,26 @@
+<ion-header translucent="true">
+    <ion-toolbar color="primary">
+      <!-- <ion-buttons collapse="true" slot="start">
+        <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
+      </ion-buttons> -->
+      <ion-title>People</ion-title>
+      <ion-buttons collapse="true" slot="end">
+        <ion-icon name="add-outline" (click)="addPerson()"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ng-container *ngIf="people; else elseBlock">
+        <app-person-item  *ngFor="let person of people | async " [person]="person" ></app-person-item>
+      </ng-container>
+    </ion-list> 
+  </ion-content>
+  
+  <ng-template #elseBlock>Loading..</ng-template>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>© 2020 - Aleksa Pavlovic</ion-title>
+    </ion-toolbar>
+  </ion-footer>
