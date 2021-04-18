@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { Person } from '../_models/person';
 import { PersonService } from '../_services/person.service';
@@ -11,7 +12,7 @@ export class PeopleComponent implements OnInit {
 
   people: Observable<Person[]>  = of([]);
 
-  constructor(private personService: PersonService) { }
+  constructor(private personService: PersonService, private router: Router) { }
 
   ngOnInit(): void {
     this.getPeople();
@@ -24,6 +25,6 @@ export class PeopleComponent implements OnInit {
   }
 
   addPerson(){
-
+    this.router.navigate(['/people/add']);
   };
 }

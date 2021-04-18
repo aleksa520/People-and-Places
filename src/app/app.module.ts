@@ -9,18 +9,23 @@ import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { PersonItemComponent } from './person-item/person-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonService } from './_services/person.service';
+import { AddPersonComponent } from './add-person/add-person.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeopleComponent,
     PersonDetailComponent,
-    PersonItemComponent
+    PersonItemComponent,
+    AddPersonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     IonicModule.forRoot()
   ],
   providers: [PersonService],

@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons collapse="true" slot="start">
+        <ion-back-button defaultHref="/tasks" ></ion-back-button>
+      </ion-buttons>
+      <ion-title>Add Person</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup]="PersonForm">
+    <ion-grid>
+  
+      <ion-row> 
+        <ion-col size-md="8" offset-md="2">
+          <ion-card>
+  
+            <ion-card-header>
+              <ion-card-title>New Person</ion-card-title>
+            </ion-card-header>
+  
+            <ion-card-content>
+              <ion-item>
+                <ion-label position="floating">First name</ion-label>
+                <ion-input type="text" [(ngModel)]="person.firstName"  formControlName="firstName"></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                <ion-label position="floating">Last name</ion-label>
+                <ion-input type="text" [(ngModel)]="person.lastName"  formControlName="lastName"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Registration number</ion-label>
+                <ion-input type="text" [(ngModel)]="person.registrationNumber"  formControlName="registrationNumber"></ion-input>
+              </ion-item>
+
+              <div margin-vertical text-right>
+  
+                <ion-button fill="outline"  color="danger" (click)="clearPerson()">
+                  <ion-icon name="close" slot="start"></ion-icon>
+                  Clear
+                </ion-button>
+  
+                <ion-button (click)="add()" color="success">
+                  <ion-icon name="add" slot="start">
+                  </ion-icon>
+                  Add Task
+                </ion-button>
+  
+              </div>
+            </ion-card-content>  
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </form>
+  </ion-content>
