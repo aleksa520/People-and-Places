@@ -1,4 +1,5 @@
 <ion-header>
+  <title>PeopleAndPlaces - add</title>
     <ion-toolbar color="primary">
       <ion-buttons collapse="true" slot="start">
         <ion-back-button defaultHref="/tasks" ></ion-back-button>
@@ -20,17 +21,17 @@
             </ion-card-header>
   
             <ion-card-content>
-              <ion-item>
+              <ion-item id="firstName">
                 <ion-label position="floating">First name</ion-label>
-                <ion-input type="text" [(ngModel)]="person.firstName"  formControlName="firstName"></ion-input>
+                <ion-input  type="text" [(ngModel)]="person.firstName"  formControlName="firstName"></ion-input>
               </ion-item>
   
-              <ion-item>
+              <ion-item id="lastName">
                 <ion-label position="floating">Last name</ion-label>
                 <ion-input type="text" [(ngModel)]="person.lastName"  formControlName="lastName"></ion-input>
               </ion-item>
 
-              <ion-item>
+              <ion-item id="registrationNumber">
                 <ion-label position="floating">Registration number</ion-label>
                 <ion-input type="text" [(ngModel)]="person.registrationNumber"  formControlName="registrationNumber"></ion-input>
               </ion-item>
@@ -42,7 +43,7 @@
                   Clear
                 </ion-button>
   
-                <ion-button (click)="add()" color="success">
+                <ion-button id="btnAdd" (click)="add()" color="success">
                   <ion-icon name="add" slot="start">
                   </ion-icon>
                   Add Task
