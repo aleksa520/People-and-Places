@@ -1,0 +1,23 @@
+<ion-header translucent="true">
+    <ion-toolbar color="primary">
+      <ion-title>Places</ion-title>
+      <ion-buttons collapse="true" slot="end">
+        <ion-icon name="add-outline" (click)="addPlace()"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ng-container *ngIf="places; else elseBlock">
+        <app-place-item  *ngFor="let place of places | async " [place]="place" ></app-place-item>
+      </ng-container>
+    </ion-list> 
+  </ion-content>
+  
+  <ng-template #elseBlock>Loading..</ng-template>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>© 2020 - Aleksa Pavlovic</ion-title>
+    </ion-toolbar>
+  </ion-footer>

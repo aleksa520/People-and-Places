@@ -11,11 +11,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonService } from './_services/person.service';
 import { AddPersonComponent } from './add-person/add-person.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PlacesComponent } from './places/places.component';
+import { PlaceItemComponent } from './place-item/place-item.component';
+import { PlaceService } from './_services/place.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeopleComponent,
+    PlacesComponent,
+    PlaceItemComponent,
     PersonDetailComponent,
     PersonItemComponent,
     AddPersonComponent
@@ -28,7 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     IonicModule.forRoot()
   ],
-  providers: [PersonService],
+  providers: [PersonService, PlaceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
