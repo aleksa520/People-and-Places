@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlacesComponent } from './places/places.component';
 import { PlaceItemComponent } from './place-item/place-item.component';
 import { PlaceService } from './_services/place.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PlaceService } from './_services/place.service';
     PeopleComponent,
     PlacesComponent,
     PlaceItemComponent,
+    HomeComponent,
     PersonDetailComponent,
     PersonItemComponent,
     AddPersonComponent
