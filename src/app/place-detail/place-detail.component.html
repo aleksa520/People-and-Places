@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/places"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Place</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content *ngIf="place; else elseBlock">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1 text-center >{{place.name}}</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2>{{place.zipcode}}</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2>Population: {{place.population}}</h2>
+        </ion-col>
+      </ion-row> 
+  
+      <ion-row> 
+        <ion-col>
+          <ion-button fill="outline" color="danger" (click)="delete()">
+            <ion-icon name="close-outline" slot="start"></ion-icon>Delete
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
+  <ng-template #elseBlock>Loading...</ng-template>

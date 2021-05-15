@@ -4,6 +4,7 @@ import { AddPersonComponent } from './add-person/add-person.component';
 import { HomeComponent } from './home/home.component';
 import { PeopleComponent } from './people/people.component';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { PlaceDetailComponent } from './place-detail/place-detail.component';
 import { PlacesComponent } from './places/places.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'people', component: PeopleComponent },
   { path: 'people/add', component: AddPersonComponent },
   { path: 'people/:id', component: PersonDetailComponent },
+  { path: 'places/:id', component: PlaceDetailComponent },
   { path: 'places', component: PlacesComponent }
 ];
 

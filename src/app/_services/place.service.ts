@@ -21,6 +21,13 @@ export class PlaceService {
             );
     }
 
+    getPlace(id: number): Observable<Place> {
+        const url = `${'https://localhost:44373/api/place'}/${id}`;
+        return this.http.get<Place>(url).pipe(
+          catchError(this.handleError<Place>(`getPlace id=${id}`))
+        );
+      }
+
     private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
 

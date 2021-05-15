@@ -15,6 +15,7 @@ import { PlacesComponent } from './places/places.component';
 import { PlaceItemComponent } from './place-item/place-item.component';
 import { PlaceService } from './_services/place.service';
 import { HomeComponent } from './home/home.component';
+import { PlaceDetailComponent } from './place-detail/place-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HomeComponent } from './home/home.component';
     PlaceItemComponent,
     HomeComponent,
     PersonDetailComponent,
+    PlaceDetailComponent,
     PersonItemComponent,
     AddPersonComponent
   ],
